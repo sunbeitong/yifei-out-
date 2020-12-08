@@ -47,3 +47,35 @@
 .el-range-separator {
   box-sizing: content-box;
 }
+
+.el-input__inner {
+  height: 32px;
+  line-height: 32px;
+}
+.el-form-item {
+  margin-bottom: 20px;
+  margin-right: 40px;
+}
+.el-form-item__label,
+.el-form-item__content,.el-input__icon {
+  line-height: 32px;
+}
+
+.el-button{height: 32px;line-height: 32px;padding-top: 0;padding-bottom: 0;border-radius: 2px;}
+.el-button:hover{opacity: 0.8;}
+.el-table__header{
+  td,th{ background: #EBF2FF;;}
+}
+.el-date-editor .el-range__icon,.el-date-editor .el-range-separator,
+.el-cascader{height: 32px;line-height: 32px;}
+.el-date-table td span{text-align: center;}
+.el-date-editor .el-range__close-icon{line-height: 26px;}
+
+.themeColor{color:$themeColor}
+.redColor{color:$redColor}
+.greenColor{color:$greenColor}
+.handleClumn{color:$themeColor;a{display: inline-block;padding: 0 5px;}}
+.el-button--text{
+  color:$themeColor;
+  &:hover{color:#4d89fe}
+}

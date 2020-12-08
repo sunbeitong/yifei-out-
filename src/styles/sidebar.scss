@@ -10,15 +10,16 @@
   .sidebar-container {
     transition: width 0.28s;
     width: $sideBarWidth !important;
-    background-color: $menuBg;
-    height: 100%;
+    background: $menuBg;
+    height: calc(100% - 50px);
     position: fixed;
     font-size: 0px;
-    top: 0;
+    top: 50px;
     bottom: 0;
     left: 0;
     z-index: 1001;
     overflow: hidden;
+    border: 1px solid #E9E9E9;
 
     // reset element-ui css
     .horizontal-collapse-transition {
@@ -71,6 +72,7 @@
     // menu hover
     .submenu-title-noDropdown,
     .el-submenu__title {
+      background-color: transparent !important;
       &:hover {
         background-color: $menuHover !important;
       }
@@ -82,13 +84,58 @@
 
     & .nest-menu .el-submenu>.el-submenu__title,
     & .el-submenu .el-menu-item {
-      min-width: $sideBarWidth !important;
+      // min-width: $sideBarWidth !important;
       background-color: $subMenuBg !important;
 
       &:hover {
         background-color: $subMenuHover !important;
       }
     }
+
+    &::after{
+      content:'';
+      position: absolute;width: 144px;height: 100%;left:76px;
+      top: 0;background-color: #fff;z-index: 1;
+    }
+    .el-submenu__icon-arrow{display: none;}
+    .subTitle{height: 50px;background: #EBF2FF;line-height: 50px;text-align: center;font-weight: normal;color:#666;font-size: 18px;margin: 0;}
+    .el-menu {
+      background-color: transparent !important;
+      position: static;
+      .subMenu{position: absolute;width: 144px;left: 76px;top:0;background-color: #fff; height:100% ;z-index: 2;}
+    }
+    .el-submenu{
+      margin-bottom: 20px;
+      .el-menu-item{padding:0;padding-left: 18px!important;min-width: 100% !important;}
+      .el-menu{display: none !important;}
+      &.is-active{
+        .el-menu{display: block !important;}
+        .el-submenu__title{background-color:  rgba(255, 255, 255, 0.5) !important;position: relative;}
+        .el-submenu__title::after{content: '';border: 8px solid transparent; border-right: 8px solid #fff;position: absolute;top: 50%;right: 0;transform: translateY(-50%);}
+        a{
+          color: $subMenuActiveText !important;
+        }
+      }
+    }
+    .el-submenu__title {
+      background-color: transparent !important;
+    }
+    .el-submenu__title{
+      line-height: 20px;
+      height: 50px;
+      padding: 0;
+      padding-left: 0 !important;
+      width: 76px;
+      text-align: center;
+      a{
+        display: block;
+        height: 100%;
+        box-sizing: border-box;
+        padding-top: 5px;
+        color: #fff;
+      }
+    }
+    .svg-icon{margin-right: 0;}
   }
 
   .hideSidebar {

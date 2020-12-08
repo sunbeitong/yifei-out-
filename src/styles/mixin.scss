@@ -21,6 +21,106 @@
   }
 }
 
+@mixin default-btn {
+  background: #206bfe;
+  border-color: #206bfe;
+  color: #fff;
+  // &:hover,
+  // &:focus,
+  // &:active {
+  // }
+}
+@mixin refresh-btn {
+  border-radius: 6px !important;
+  height: 28px !important;
+  line-height: 28px !important;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #206bfe;
+    border-color: #206bfe;
+    color: #fff;
+  }
+}
+@mixin search-btn {
+  background: #206bfe;
+  border-color: #206bfe;
+  color: #fff;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #206bfe;
+    border-color: #206bfe;
+    color: #fff;
+  }
+}
+@mixin add-btn {
+  background: #206bfe;
+  border-color: #206bfe;
+  color: #fff;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #206bfe;
+    border-color: #206bfe;
+    color: #fff;
+  }
+}
+@mixin reset-btn {
+  &:hover,
+  &:focus,
+  &:active {
+    background: #FFF;
+    border-color: #DCDFE6;
+    color: #606266;
+  }
+}
+@mixin field-set-btn {
+  border-color: #206bfe;
+  color: #206bfe;
+  background-color: #fff;
+  // &:hover,
+  // &:focus,
+  // &:active {
+  // }
+}
+@mixin export-btn {
+  border-color: #41AA26;
+    color: #fff;
+    background-color: #41AA26;
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #41AA26;
+    color: #fff;
+    background-color: #41AA26;
+  }
+}
+@mixin import-btn {
+  border-color: #41AA26;
+  color: #41AA26;
+  background-color: #fff;
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #41AA26;
+    color: #41AA26;
+    background-color: #fff;
+  }
+}
+@mixin download-btn {
+  border-color: #206BFE;
+  color: #206BFE;
+  background: rgba(32, 107, 254, 0.2);
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #206BFE;
+    color: #206BFE;
+    background: rgba(32, 107, 254, 0.2);
+  }
+}
+
 @mixin relative {
   position: relative;
   width: 100%;
